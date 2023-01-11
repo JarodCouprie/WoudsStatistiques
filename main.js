@@ -8,9 +8,8 @@
 //proba 6+ : 1/6
 
 function statsDes(nombreDes, pallier){
-    let proba = Math.ceil((7-pallier)/6)
-    return (nombreDes * proba);
+    return Math.ceil(nombreDes * ((7-pallier)/6));
 }
 
-console.log(statsDes(6,6));
+console.log(statsDes(12,4));
 
