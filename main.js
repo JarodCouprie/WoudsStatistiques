@@ -11,5 +11,4 @@ function statsDes(nombreDes, pallier){
     return Math.ceil(nombreDes * ((7-pallier)/6));
 }
 
-console.log(statsDes(12,4));
 

@@ -9,8 +9,64 @@
     <title>Wounds statistiques</title>
 </head>
 <body>
-    <div>
-
-    </div>
+    <form>
+        <label for="hitting-skill">
+            Capacité de tir OU Capacité de combat
+        </label>
+        <select name="skill" id="hitting-skill">
+            <option value="">--Capacité de tir ou de combat--</option>
+            <option value="2">2+</option>
+            <option value="3">3+</option>
+            <option value="4">4+</option>
+            <option value="5">5+</option>
+            <option value="6">6+</option>
+        </select>
+        <fieldset>
+            <legend>
+                Rerolls hits
+            </legend>
+            <div>
+                <input type="checkbox" id="reroll1Hit" name="reroll1Hit">
+                <label for="reroll1Hit">Reroll des 1 à la touche</label>
+            </div>
+            <div>
+                <input type="checkbox" id="fullRerollHit" name="fullRerollHit">
+                <label for="fullRerollHit">Full reroll des touches</label>
+            </div>
+        </fieldset>
+        <label for="weapon-force">
+            Force de l'arme OU Force de l'attaquant + modifieur arme de mêlée
+        </label>
+        <select name="weapon-force" id="weapon-force">
+            <option value="">--Force--</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+            <option value="7">7</option>
+            <option value="8">8</option>
+            <option value="9">9</option>
+            <option value="10">10</option>
+            <option value="11">11</option>
+            <option value="12">12</option>
+            <option value="13">13</option>
+            <option value="14">14</option>
+            <option value="15">15</option>
+            <option value="16">16</option>
+        </select>
+        <fieldset>
+            <legend>
+                Rerolls wounds
+            </legend>
+            <div>
+                <input type="checkbox" id="reroll1Wound" name="reroll1Wound">
+                <label for="reroll1Wound">Reroll des 1</label>
+            </div>
+            <div>
+                <input type="checkbox" id="fullRerollWound" name="fullRerollWound">
+                <label for="fullRerollWound">Full reroll</label>
+            </div>
+        </fieldset>
+    </form>
 </body>
 </html>
