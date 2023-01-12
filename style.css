@@ -8,11 +8,13 @@
 }
 
 body{
-    background: #000;
+    background: #111;
     padding: 50px;
 }
 form{
-    color: #fff;
+    color: #bebebe;
+    display: flex;
+    flex-direction: column;
 }
 
 fieldset{
@@ -20,3 +22,6 @@ fieldset{
     text-align: center;
 }
 
+select{
+    width: 500px;
+}

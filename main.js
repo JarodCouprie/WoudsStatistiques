@@ -10,37 +10,24 @@ proba 6+ : 1/6
 */
 
 function d6RollHits(dicesNumber, roll){
-    return Math.round(dicesNumber * ((7-roll)/6));
-}
-
-function d6RollStats(dicesNumber, roll){
     return dicesNumber * ((7-roll)/6);
 }
 
-let hit = d6RollHits(21, 4);
-let wound = d6RollHits(hit,2);
-let damages = 3*(wound - d6RollHits(wound,5));
+let attack = 26;
+let ballisticSkill = 3;
+let woundSkill = 3;
+let armorSave = 7;
+let damages = 1;
 
+let hit = d6RollHits(attack, ballisticSkill);
+let wound = d6RollHits(hit,woundSkill);
+let unsavedWounds = wound - d6RollHits(wound,armorSave);
+let damagesTaken = unsavedWounds * damages;
 
-console.log(hit+" touches");
-console.log(wound+" blessures");
-console.log(damages+" dégats");
-
-
-hit = d6RollStats(21, 4);
-wound = d6RollStats(hit,2);
-damages = 3*(wound - d6RollStats(wound,5));
-
-
-console.log(hit+" touches");
-console.log(wound+" blessures");
-console.log(damages+" dégats");
-
-
-
-
-
-
+// console.log(hit+" touches");
+// console.log(wound+" blessures");
+console.log(unsavedWounds.toFixed(2)+" blessures non sauvegardées");
+console.log(damagesTaken.toFixed(2)+" dommages");
 
 /*
 Number of attacks
